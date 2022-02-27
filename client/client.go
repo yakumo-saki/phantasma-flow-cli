@@ -25,7 +25,7 @@ func (c *Client) Send(msg string) (int, error) {
 	return 1, nil
 }
 
-func (c *Client) TestConn(addr string) (string, error) {
+func (c *Client) Ping(addr string) (string, error) {
 	conn, err := net.Dial("tcp", addr)
 	if err != nil {
 		return "", err
